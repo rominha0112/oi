@@ -1,67 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>200-móveis</title>
+    <title>200-Móveis</title>
+
     <style>
+       
+       * {
+            box-sizing: border-box;
+        }
         #bola1 {
             position: absolute;
             top: -80px;
             left: -80px;
         }
+
         #bola2 {
             position: absolute;
             top: -80px;
             right: -80px;
         }
+
         #logo {
             display: block;
             margin-left: auto;
             margin-right: auto;
-            
         }
+
         .center_align {
             display: flex;
             justify-content: center;
             align-items: center;
-           
         }
-        .ota {
-            border: 30px solid rgb(88, 11, 11);
-            height: 300px;
-            width: 300px;
-            border-radius: 20px;
-            overflow: hidden;
-        }
-        .est{
-            border: 50px solid rgb(88, 11, 11);
-            margin: 0;
-            width: 10%;
-            display: block;
-            padding: 15px;
 
+        .card {
+            border-radius: 5px;
+            box-shadow: 15px 15px 20px 0 black;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            height: 350px;
+            transition: all 0.3s ease-out;
+            color: #000;
+            background-color: #ffffff;
         }
+
+        .card:hover {
+            transform: translateY(5px);
+            box-shadow: 30px 30px 40px 0 black;
+            cursor: pointer;
+        }
+
+        .card img {
+            width: 100%;
+            height: 225px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .center_align3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        body {
+            background-image: url("Imgs/fundo.png");
+            margin: 0;
         
-    
+        }
+        footer {
+            width: 100%;
+            height: 150px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .imagemr {
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2000px;
+        }
+
     </style>
 </head>
+
 <body>
+
     <img src="Imgs/logo.png" height="400" id="logo">
+
     <img src="Imgs/bola.png" height="250" id="bola1">
     <img src="Imgs/bola.png" height="250" id="bola2">
+
     <div class="center_align">
-        <img src="Imgs/estante.png" class="ota"></img>
-    </div>
-    <div class="center_align">
-        <p class="est" >Estante:</p>
-        <div class="center_align">
-            <p class="est" >Preço:250</p>
+
+        <div class="card">
+            <img src="Imgs/estante.png">
+            <p>Estante</p>
+            <p>Preço: R$ 250</p>
         </div>
+
+        <div class="card">
+            <img src="Imgs/armario de pallet.jfif">
+            <p>Armário</p>
+            <p>Preço: R$ 600</p>
+        </div>
+
+        <div class="card">
+            <img src="Imgs/Cadeira_pallet.jfif">
+            <p>Cadeira</p>
+            <p>Preço: R$ 120</p>
+        </div>
+
     </div>
-               
-        <div class="center_align"></div>
-        <div class="center_align"></div>
+
+    <div class="center_align">
+
+        <div class="card">
+            <img src="Imgs/cama pallet.jfif">
+            <p>Cama</p>
+            <p>Preço: R$ 450</p>
+        </div>
+
+        <div class="card">
+            <img src="Imgs/Sofa feito de pallet.jpg">
+            <p>Sofá</p>
+            <p>Preço: R$ 650</p>
+        </div>
+
+        <div class="card">
+            <img src="Imgs/cama.webp">
+            <p>Mesa</p>
+            <p>Preço: R$ 400</p>
+        </div>
+
     </div>
+
+    <h1 class="center_align3">Quem Somos?</h1>
+
+    <p class="center_align3">
+        Somos uma empresa que nasceu com um propósito simples: ajudar pessoas
+        a transformarem sua primeira casa em um verdadeiro lar. Criamos móveis
+        funcionais, confortáveis e acessíveis, utilizando principalmente
+        materiais reaproveitados, como pallets, para oferecer produtos com
+        bom custo-benefício sem abrir mão do design e da qualidade.
+        Acreditamos que conquistar uma casa própria não deveria significar
+        começar uma nova dívida para conseguir mobiliá-la. Por isso,
+        desenvolvemos soluções pensadas para quem está começando uma nova
+        etapa da vida, unindo acessibilidade, funcionalidade e sustentabilidade
+        em cada móvel.
+    </p>
+
 </body>
+<footer>
+    <div class="center_align">
+        <img src="Imgs/rodape (1).png" class="imagemr"/>
+    </div>
+</footer>
 </html>
