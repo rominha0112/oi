@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<style>
+    *{
+        font-family: "Segoe UI";
+    }
+   .center_align{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card {
+            border-radius: 5px;
+            box-shadow: 15px 15px 20px 0 black;
+            padding: 10px;
+            margin: 10px;
+            width: 360px;
+            height: 1000px;
+            transition: all 0.3s ease-out;
+            color: #000;
+            background-color: #ffffff;
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+        body {
+            background-image: url("Imgs/fundo.png");
+            margin: 0;
+        
+        }
+        .input{
+            border:3px solid #000 ;
+            border-radius: 7px;
+            margin:10px;
+            width: 250px;
+            height: 50px;            
+        }
+        .input:focus{
+            box-shadow: 6px 6px 6px 0 black;
+            
+        }
+        .radio {
+            border:3px solid #000 ;
+            border-radius: 7px;
+            margin:10px;
+            width: 50px;
+            height: 50px; 
+        }
+        button {
+            border-radius: 5px;
+            box-shadow: 7px 7px 10px 0 black;
+            background-color: orange;
+            color:#ffffff;
+            height: 70px;
+            width: 160 px;
+            transition: background-color 0.5s ease;
+            border: none;
+        }
+        button:hover{
+            background-color: brown;
+            box-shadow: 10px 10px 12px 0 black;
+        }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area de compra</title>
+</head>
+<body>
+<div class="center_align">
+
+    <div class="card" id="div">
+        <form>
+            <div>
+                <p id="preco">Carregando</p>
+            </div>
+            <div>
+                <input class="input" type="text" placeholder="Nome ou id." required>
+            </div>
+            <div>
+                <p>Escolha o metodo de autenticação:</p>
+            </div>
+            <div>
+                <input type="radio" class="radio" id="email_opcao" name="c" required>
+                <label for="email_opcao">Email</label>
+            </div>
+            <div>
+                <input type="radio" class="radio" id="tel_opcao" name="c" required>
+                <label for="tel_opcao">Telefone</label>
+            </div>
+            <div class="center_align">
+                <input class="input" type="email" placeholder="Qual o seu Email?" id="email" required>
+            </div>
+            <div class="center_align">
+                <input class="input" type="number" placeholder="Qual o seu telefone?" id="telefone" required>
+            </div>
+            <div>
+                <input class="input" type="number" placeholder="Qual o seu CPF?" required>
+            </div>
+            <div>
+                <label for="estado">Estado:</label>
+                <select class="input" id="estado" name="estado" required>
+                    <option value="">Selecione seu estado</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </div>
+            <div>
+                <input class="input" type="text" placeholder="Qual é a sua cidade?" required>
+            </div>
+            <div>
+                <input class="input" type="text" placeholder="Qual é o seu bairro?" required>
+            </div>
+            <div>
+                <input class="input" type="text" placeholder="Qual é a sua rua?" required>
+            </div>
+            <div>
+                <input class="input" type="number" placeholder="Qual é o seu número?" required>
+            </div>
+            <div>
+                <input class="input" type="text" placeholder="Observações" required>
+            </div>
+        </form>
+        <div class="center_align">
+            <button onclick="pagou()">Pagar</button>
+        </div>
+    </div>
+</div>
+    
+
+
+
+
+
+
+
+
+        </div>
+    </div> 
+    
+</body>
+<script>
+    function pagou(){
+        window.location.href ="200 móveis.html"
+    }
+    const preco = urlParams.get("preco")
+    if ("preco"){
+        document.getElementById("preco").innerText = preco
+    }
+
+    window.onload = function() {
+        document.getElementById("email").style.display="none"
+        document.getElementById("telefone").style.display="none"
+    }
+
+    document.getElementById("email_opcao").addEventListener("change",function() {
+        if (this.checked) {
+            document.getElementById("email").style.display="block"
+            document.getElementById("telefone").style.display="none"
+        }
+});
+    document.getElementById("tel_opcao").addEventListener("change",function() {
+        if (this.checked) {
+            document.getElementById("telefone").style.display="block"
+            document.getElementById("email").style.display="none"
+        }
+});
+    
+        
+</script>
+</html> 
