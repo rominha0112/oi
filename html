@@ -6,20 +6,21 @@
     <title>200-Móveis</title>
 
     <style>
+          
+        html, body {
+            overflow-x: hidden;
+        }      
        
-       * {
-            box-sizing: border-box;
-        }
         #bola1 {
             position: absolute;
-            top: -80px;
-            left: -80px;
+            top: -100px;
+            left: -130px;
         }
 
         #bola2 {
             position: absolute;
-            top: -80px;
-            right: -80px;
+            top: -100px;
+            right: -130px;
         }
 
         #logo {
@@ -67,7 +68,6 @@
             margin-left: auto;
             margin-right: auto;
             color: #ffffff;
-            text-align: center;
         }
 
         body {
@@ -75,96 +75,124 @@
             margin: 0;
         
         }
-        footer {
-            width: 100%;
-            height: 150px;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
         .imagemr {
-            height: 150px;
+            height: 200px;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 2000px;
+            width: 2500px;
+            max-height: 200px;
+            max-width: 2500px;
         }
-
+        .card2 {
+            border-radius: 5px;
+            box-shadow: 15px 15px 20px 0 black;
+            padding: 20px;
+            margin: 10px;
+            width: 500px;
+            height: 320px;
+            color: #000;
+            background-color: #ffffff;
+            font-family: "Segoe UI";
+        }
+        .card3 {
+            border-radius: 5px;
+            box-shadow: 15px 15px 20px 0 black;
+            padding: 20px;
+            margin: 10px;
+            width: 750px;
+            height: 75px;
+            color: #ffffff;
+            background-color: #310000; 
+            font-family: "Segoe UI";
+        }
+        
     </style>
 </head>
 
 <body>
 
     <img src="Imgs/logo.png" height="400" id="logo">
-
     <img src="Imgs/bola.png" height="250" id="bola1">
     <img src="Imgs/bola.png" height="250" id="bola2">
 
     <div class="center_align">
 
-        <div class="card">
+        <div class="card" onclick="change(200)">
             <img src="Imgs/estante.png">
             <p>Estante</p>
-            <p>Preço: R$ 250</p>
+            <p>Preço: R$ 200</p>
         </div>
 
-        <div class="card">
+        <div class="card" onclick="change(600)">
             <img src="Imgs/armario de pallet.jfif">
             <p>Armário</p>
             <p>Preço: R$ 600</p>
         </div>
 
-        <div class="card">
+        <div class="card" onclick="change(100)">
             <img src="Imgs/Cadeira_pallet.jfif">
             <p>Cadeira</p>
-            <p>Preço: R$ 120</p>
+            <p>Preço: R$ 100</p>
         </div>
 
     </div>
 
     <div class="center_align">
 
-        <div class="card">
+        <div class="card" onclick="change(450)">
             <img src="Imgs/cama pallet.jfif">
             <p>Cama</p>
             <p>Preço: R$ 450</p>
         </div>
 
-        <div class="card">
+        <div class="card" onclick="change(650)">
             <img src="Imgs/Sofa feito de pallet.jpg">
             <p>Sofá</p>
             <p>Preço: R$ 650</p>
         </div>
 
-        <div class="card">
+        <div class="card" onclick="change(200)">
             <img src="Imgs/cama.webp">
             <p>Mesa</p>
-            <p>Preço: R$ 400</p>
+            <p>Preço: R$ 200</p>
         </div>
 
     </div>
+    <div class="center_align">
+    <div class="card2">
+        <h1 class="center">Quem Somos?</h1>
 
-    <h1 class="center_align3">Quem Somos?</h1>
+        <p>
+        A nossa empresa foi pensada com o propósito de ajudar você, comprador do primeiro imóvel.
+        Porque comprar uma casa, não deve ser uma dívida, e sim, a realização do sonho de ter um lar próprio.
+        Vendemos móveis sustentaveis de pallet, que transformam a casa em um lar.
+        Contamos com um sistema inovador de motagem simples e de encaixe rápido.
+        Além disso, o nosso incrível produto conta com vários tamanhos e é facilmente personalizavel.
+        Financeiramente falando, comprar os nossos móveis é melhor para alguém que acabou de comprar a casa nova que financiar, comprar no crédito ou comprar móveis usados.
+        Será que nosso jeitnho rústico de ser merece entrar em sua nova morada?
 
-    <p class="center_align3">
-        Somos uma empresa que nasceu com um propósito simples: ajudar pessoas
-        a transformarem sua primeira casa em um verdadeiro lar. Criamos móveis
-        funcionais, confortáveis e acessíveis, utilizando principalmente
-        materiais reaproveitados, como pallets, para oferecer produtos com
-        bom custo-benefício sem abrir mão do design e da qualidade.
-        Acreditamos que conquistar uma casa própria não deveria significar
-        começar uma nova dívida para conseguir mobiliá-la. Por isso,
-        desenvolvemos soluções pensadas para quem está começando uma nova
-        etapa da vida, unindo acessibilidade, funcionalidade e sustentabilidade
-        em cada móvel.
-    </p>
-
+        </p>
+    </div>
+    </div>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
 </body>
 <footer>
-    <div class="center_align">
-        <img src="Imgs/rodape (1).png" class="imagemr"/>
-    </div>
+        <div class="center_align">
+        <div class="card3">
+            <p>200 Móveis — Móveis acessíveis para transformar sua primeira casa em um lar. Qualidade, funcionalidade e sustentabilidade em cada detalhe.Todos os direitos reservados © 200 Móveis 2026.</p>
+        </div>
 </footer>
+<script>
+    function change(preco){
+        window.location.href ="C.html?preco=" + preco
+    }
+</script>
 </html>
