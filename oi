@@ -150,15 +150,6 @@
         </div>
     </div>
 </div>
-    
-
-
-
-
-
-
-
-
         </div>
     </div> 
     
@@ -167,6 +158,7 @@
     function pagou(){
         window.location.href ="200 móveis.html"
     }
+    const urlParams = new URLSearchParams(window.location.search);
     const preco = urlParams.get("preco")
     if ("preco"){
         document.getElementById("preco").innerText = preco
